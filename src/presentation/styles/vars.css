@@ -1,0 +1,30 @@
+
+@layer base {
+  :root {
+    /* Base */
+    --color-bg: #F5F5F5;
+    --color-surface: #FFFFFF;
+    --color-text: #1A1A1A;
+    --color-border: #000000;
+    --color-shadow: #000000;
+
+
+    --accent-primary: #FFD1FF;  
+    --accent-secondary: #D1FFFF;
+    --accent-tertiary: #FFF4D1;
+    --accent-danger: #FFD1D1; 
+  }
+
+  .dark {
+    --color-bg: #121212;
+    --color-surface: #1E1E1E;
+    --color-text: #F5F5F5;
+    --color-border: rgba(255, 255, 255, 0.2);
+    --color-shadow: rgba(255, 255, 255, 0.1);
+
+    --accent-primary: #5A3D5A;
+    --accent-secondary: #3D5A5A;
+    --accent-tertiary: #5A543D;
+    --accent-danger: #5A3D3D;
+  }
+}
