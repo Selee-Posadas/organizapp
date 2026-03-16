@@ -29,15 +29,15 @@ organizApi.interceptors.response.use(
 
     if (response) {
       if (response.status === 401) {
-        console.log("Token inválido o expirado. Redirigiendo al login...");
+        console.log("Token not found. Redirecting to login...");
       }
 
       if (response.status === 400) {
-        const message = response.data.message || "Datos invalidos";
-        console.error("Error de validación:", message);
+        const message = response.data.message || "Invalid data";
+        console.error("Validation error:", message);
       }
     } else {
-      console.error("Error de red: No se pudo conectar al servidor");
+      console.error("Network error: Could not connect to the server");
     }
 
     return Promise.reject(error);

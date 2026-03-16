@@ -21,6 +21,8 @@ module.exports = {
           secondary: "var(--accent-secondary)",
           tertiary: "var(--accent-tertiary)",
           danger: "var(--accent-danger)",
+          mint: "var(--accent-mint)",
+          quarter: "var(--accent-quarter)",
         },
 
       },

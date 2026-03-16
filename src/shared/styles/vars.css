@@ -1,7 +1,7 @@
 
 @layer base {
   :root {
-    --color-bg: #F5F5F5;
+    --color-bg: #FEFBF2;
     --color-surface: #FFFFFF;
     --color-text: #1A1A1A;
     --color-border: #000000;
@@ -9,9 +9,11 @@
 
 
     --accent-primary: #FFD1FF;  
-    --accent-secondary: #D1FFFF;
+    --accent-secondary: #AFFFBF;
     --accent-tertiary: #FFF4D1;
+    --accent-quarter: #D1FFFF;
     --accent-danger: #FFD1D1; 
+    --accent-mint: #AFFFBF;
   }
 
   .dark {

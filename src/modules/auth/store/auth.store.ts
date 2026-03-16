@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { SecureStorageAdapter } from "@/src/shared/api/secure-storage-adapter";
-import { User } from "@/src/shared/interfaces/user.interface";
+
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { checkAction } from "../actions/check-auth.action";
 import { loginAction } from "../actions/login.action";
 import { registerAction } from "../actions/register.action";
+import { User } from "@/src/shared/interfaces/user.interface";
+import { SecureStorageAdapter } from "@/src/shared/api/secure-storage-adapter";
 
 type AuthStatus = "authenticated" | "not-authenticated" | "checking";
 

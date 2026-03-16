@@ -1,3 +1,4 @@
+
 import { organizApi } from "@/src/shared/api/organizapi";
 import { AuthResponse } from "../interfaces/auth-response.interface";
 
