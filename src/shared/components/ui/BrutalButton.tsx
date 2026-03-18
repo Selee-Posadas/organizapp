@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 interface Props {
   onPress: () => void;
   text: string;
-  variant?: "primary" | "secondary" | "tertiary" | "danger";
+  variant?: "primary" | "secondary" | "tertiary" | "quarter" | "danger";
   isLoading?: boolean;
   className?: string;
 }
@@ -20,6 +20,7 @@ export const BrutalButton = ({
     primary: "bg-accent-primary",
     secondary: "bg-accent-secondary",
     tertiary: "bg-accent-tertiary",
+    quarter: "bg-accent-quarter",
     danger: "bg-accent-danger",
   };
 
@@ -34,7 +35,7 @@ export const BrutalButton = ({
           className={cn(
             variantStyles[variant],
             "border-3 border-brutal-border p-4 rounded-brutal",
-            pressed ? "shadow-none" : "shadow-[4px_4px_0px_0px_#000000]",
+            pressed ? "shadow-none" : "shadow-brutal",
           )}
         >
           <Text className="text-center font-heading text-brutal-text text-lg uppercase tracking-wider">

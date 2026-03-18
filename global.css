@@ -1,17 +1,21 @@
 /* /global.css */
+@import "./src/shared/styles/vars.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import "./src/presentation/styles/vars.css";
 
 @layer components {
 
+  .shadow-brutal {
+    box-shadow: 4px 4px 0px 0px var(--color-shadow);
+  }
+
   .card-brutal {
-    @apply border-3 rounded-brutal p-4;
+    @apply border-3 rounded-brutal p-4 shadow-brutal;
     border-color: var(--color-border);
     background-color: var(--color-surface);
-    box-shadow: 4px 4px 0px 0px var(--color-shadow);
   }
   
 }

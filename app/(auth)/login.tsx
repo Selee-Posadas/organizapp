@@ -1,11 +1,11 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 
 import { AuthLayout } from "@/src/modules/auth/components/layout/AuthLayout";
 import { useAuthStore } from "@/src/modules/auth/store/auth.store";
-import { BrutalInput } from "@/src/shared/components/ui/BrutalInput";
 import { BrutalButton } from "@/src/shared/components/ui/BrutalButton";
 import { BrutalHeader } from "@/src/shared/components/ui/BrutalHeader";
+import { BrutalInput } from "@/src/shared/components/ui/BrutalInput";
 
 export default function LoginScreen() {
   const login = useAuthStore((state) => state.login);
@@ -15,42 +15,50 @@ export default function LoginScreen() {
   };
 
   return (
-    <AuthLayout subtitle="Your digital sketchbook for life.">
-      <BrutalHeader
-        title="Welcome Back!"
-        withHeaderBlock={true}
-        containerClassName="mb-10"
-      />
+    <AuthLayout subtitle="Life is better when you plan it!">
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <BrutalHeader
+          title="Bienvenida!"
+          withHeaderBlock={true}
+          containerClassName="mb-10"
+        />
 
-      <BrutalInput
-        label="EMAIL ADDRESS"
-        placeholder="hello@stationery.com"
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
-      
-      <BrutalInput 
-        label="PASSWORD" 
-        placeholder="••••••••" 
-        secureTextEntry 
-      />
+        <BrutalInput
+          label="CORREO ELECTRÓNICO"
+          placeholder="hola@organizapp.com"
+          icon="mail-outline"
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
 
-      <BrutalButton text="Sign In →" variant="secondary" onPress={onSignIn} />
+        <BrutalInput
+          label="CONTRASEÑA"
+          placeholder="••••••••"
+          icon="lock-closed-outline"
+          secureTextEntry
+        />
 
-      <Link href="/" className="self-center mt-6">
-        <Text className="font-body underline text-brutal-text">
-          Forgot your password?
-        </Text>
-      </Link>
+        <BrutalButton
+          text="Ingresar →"
+          variant="secondary"
+          onPress={onSignIn}
+        />
 
-      <View className="items-center mt-10">
-        <Text className="font-body text-base text-brutal-text">
-          New to the planner?{" "}
-          <Link href="/register" className="font-heading underline">
-            Sign Up
-          </Link>
-        </Text>
-      </View>
+        <Link href="/" className="self-center mt-6">
+          <Text className="font-body underline text-brutal-text">
+            ¿Olvidaste tu contraseña?
+          </Text>
+        </Link>
+
+        <View className="items-center mt-10 mb-5">
+          <Text className="font-body text-base text-brutal-text">
+            ¿Nuevo en el planner?{" "}
+            <Link href="/register" className="font-heading underline">
+              Registrate
+            </Link>
+          </Text>
+        </View>
+      </ScrollView>
     </AuthLayout>
   );
 }
